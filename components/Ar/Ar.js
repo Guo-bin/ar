@@ -25,10 +25,10 @@ const Ar = () => {
       </div>
       {isLoading && (
         <a-scene
-          vr-mode-ui='enabled: false;'
+          vr-mode-ui='enabled: false'
           embedded
           renderer='logarithmicDepthBuffer: true'
-          arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
+          arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false'>
           <a-nft
             type='nft'
             url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'
