@@ -20,9 +20,9 @@ const Ar = () => {
         src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'
         strategy='beforeInteractive'
       />
-      {/* <div className='arjs-loader'>
+      <div className='arjs-loader'>
         <div>Loading, please wait...</div>
-      </div> */}
+      </div>
       {isLoading && (
         <div>
           <a-scene>
