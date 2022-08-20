@@ -20,7 +20,7 @@ const Ar = () => {
         src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'
         strategy='beforeInteractive'
       />
-      {isLoading && console.log("isRunning") && (
+      {isLoading && (
         <a-scene
           vr-mode-ui='enabled: false;'
           embedded
