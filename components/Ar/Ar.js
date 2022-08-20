@@ -57,12 +57,10 @@ const Ar = () => {
               smoothCount='10'
               smoothTolerance='.01'
               smoothThreshold='5'>
-              <a-box
-                position='0 1.5 -3'
-                color='#ff0000'
-                material='opacity:0.5'
-                scale='0.5 0.5 0.5'
-                animation='property:rotation; from:0 0 0; to:0 360 0; dur:2000; loop:true; dir: alternate;'></a-box>
+              <a-entity
+                gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf'
+                scale='5 5 5'
+                position='50 150 0'></a-entity>
             </a-nft>
             <a-entity camera>
               <a-cursor></a-cursor>
