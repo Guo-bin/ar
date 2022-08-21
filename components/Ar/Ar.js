@@ -28,7 +28,6 @@ const Ar = () => {
           <a-scene
             vr-mode-ui='enabled: false;'
             renderer='logarithmicDepthBuffer: true;'
-            embedded
             arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
             {/* <a-marker preset="hiro"> */}
             {/* <a-box
