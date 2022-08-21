@@ -25,7 +25,11 @@ const Ar = () => {
       </div>
       {isLoading && (
         <div>
-          <a-scene>
+          <a-scene
+            vr-mode-ui='enabled: false;'
+            renderer='logarithmicDepthBuffer: true;'
+            embedded
+            arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'>
             {/* <a-marker preset="hiro"> */}
             {/* <a-box
               position='0 1.5 -3'
