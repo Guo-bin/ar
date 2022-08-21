@@ -4,7 +4,7 @@ import HeadComponent from "../components/Head/Head";
 import Ar from "../components/Ar/Ar";
 export default function Home() {
   return (
-    <div className={styles.container} id='ar'>
+    <div className={"container"} id='ar'>
       {/* <HeadComponent /> */}
       <Ar />
     </div>
