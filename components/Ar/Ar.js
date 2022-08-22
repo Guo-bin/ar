@@ -46,13 +46,13 @@ const Ar = () => {
             animation='property:rotation; from:0 0 0; to:0 360 0; dur:2000; loop:true; dir: alternate;'></a-box>
           <a-nft
             type='nft'
-            url='ASDASD/ASDASD'
+            url='/nfts/test-no1'
             smooth='true'
             smoothCount='10'
             smoothTolerance='.01'
             smoothThreshold='5'>
             <a-entity
-              gltf-model='gltf/women.gltf'
+              gltf-model='/gltf/women.gltf'
               scale='1 1 1'
               position='500 300 -200'
               rotation='-90 0 0 '></a-entity>
