@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Script from "next/script";
 
+// import sdasd from 'static/ASDASD/ASDASD'
 const Ar = () => {
+  const assetRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
   }, []);
+
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>
       <Script
@@ -29,6 +32,12 @@ const Ar = () => {
           renderer='logarithmicDepthBuffer: false;'
           arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'
           embedded>
+          {/* <a-assets>
+            <a-asset-item
+              id='animated-asset'
+              src='gltf/women.gltf'
+              ref={assetRef}></a-asset-item>
+          </a-assets> */}
           <a-box
             position='0 1.5 -3'
             color='#ff0000'
@@ -37,15 +46,16 @@ const Ar = () => {
             animation='property:rotation; from:0 0 0; to:0 360 0; dur:2000; loop:true; dir: alternate;'></a-box>
           <a-nft
             type='nft'
-            url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex'
+            url='ASDASD/ASDASD'
             smooth='true'
             smoothCount='10'
             smoothTolerance='.01'
             smoothThreshold='5'>
             <a-entity
-              gltf-model='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf'
-              scale='5 5 5'
-              position='100 100 -200'></a-entity>
+              gltf-model='gltf/women.gltf'
+              scale='1 1 1'
+              position='500 300 -200'
+              rotation='-90 0 0 '></a-entity>
           </a-nft>
           <a-entity camera></a-entity>
         </a-scene>
