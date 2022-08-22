@@ -55,7 +55,8 @@ const Ar = () => {
               gltf-model='/glb/women.glb'
               scale='1 1 1'
               position='0 0 0'
-              rotation='-90 0 0 '></a-entity>
+              rotation='-90 0 0 '
+              animation-mixer='loop: repeat'></a-entity>
           </a-nft>
           <a-entity camera></a-entity>
         </a-scene>
