@@ -52,7 +52,7 @@ const Ar = () => {
             smoothTolerance='.01'
             smoothThreshold='5'>
             <a-entity
-              gltf-model='/gltf/women.gltf'
+              gltf-model='/glb/women.glb'
               scale='1 1 1'
               position='0 0 0'
               rotation='-90 0 0 '></a-entity>
