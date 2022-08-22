@@ -54,7 +54,7 @@ const Ar = () => {
             <a-entity
               gltf-model='/gltf/women.gltf'
               scale='1 1 1'
-              position='500 300 -200'
+              position='0 0 0'
               rotation='-90 0 0 '></a-entity>
           </a-nft>
           <a-entity camera></a-entity>
