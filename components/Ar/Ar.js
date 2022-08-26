@@ -1,16 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
+import CameraAuth from "components/CameraAuth";
 import Script from "next/script";
 
 // import sdasd from 'static/ASDASD/ASDASD'
 const Ar = () => {
   const assetRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [permission, setPermission] = useState(false);
   useEffect(() => {
     setIsLoading(true);
     navigator.mediaDevices
       .getUserMedia({ video: true })
-      .then((e) => console.log(e))
-      .catch((e) => console.log("不允許哦"));
+      .then((e) => setPermission(true))
+      .catch((e) => setPermission(false));
   }, []);
 
   // useEffect(() => {
@@ -37,6 +39,7 @@ const Ar = () => {
       <div className='arjs-loader'>
         <div>Loading, please wait...</div>
       </div>
+      {permission && <CameraAuth />}
       {isLoading && (
         <a-scene
           vr-mode-ui='enabled: false;'
