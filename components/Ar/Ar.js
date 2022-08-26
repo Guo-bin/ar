@@ -12,7 +12,7 @@ const Ar = () => {
     navigator.mediaDevices
       .getUserMedia({ video: true })
       .then((e) => setPermission(true))
-      .catch((e) => setPermission(false));
+      .catch((e) => alert("不允許"));
   }, []);
 
   // useEffect(() => {
@@ -39,7 +39,7 @@ const Ar = () => {
       <div className='arjs-loader'>
         <div>Loading, please wait...</div>
       </div>
-      {permission && <CameraAuth />}
+      {!permission && <CameraAuth />}
       {isLoading && (
         <a-scene
           vr-mode-ui='enabled: false;'
