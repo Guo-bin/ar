@@ -3,7 +3,7 @@ import "mind-ar/dist/mindar-image.prod.js";
 import "aframe";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
 import styles from "./index.module.scss";
-export default () => {
+const Ar = () => {
   const sceneRef = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
   console.log("HI");
@@ -79,3 +79,4 @@ export default () => {
     </>
   );
 };
+export default Ar;

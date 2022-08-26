@@ -1,6 +1,6 @@
 import dynamic from "next/dynamic";
 
-const DynamicArjs = dynamic(() => import("../../components/Ar2/Ar"), {
+const DynamicArjs = dynamic(() => import("../../components/Ar2"), {
   ssr: false,
 });
 
