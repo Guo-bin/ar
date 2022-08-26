@@ -14,7 +14,14 @@
     "react-dom": "18.2.0",
     "react-web-ar": "^1.0.0-beta0",
     "sass": "^1.54.5",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "aframe": "^1.2.0",
+    "mind-ar": "^1.0.0",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "8.22.0",
