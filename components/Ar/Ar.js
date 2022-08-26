@@ -7,7 +7,18 @@ const Ar = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then((e) => console.log(e))
+      .catch((e) => console.log("不允許哦"));
   }, []);
+
+  // useEffect(() => {
+  //   if (isLoading) {
+  //     const entity = document.querySelector("a-entity");
+  //   }
+  //   console.log(assetRef);
+  // }, [isLoading]);
 
   return (
     <div style={{ position: "relative", width: "100%", height: "100%" }}>
@@ -33,10 +44,10 @@ const Ar = () => {
           arjs='trackingMethod: best; sourceType: webcam;debugUIEnabled: false;'
           embedded>
           {/* <a-assets>
-            <a-asset-item
+            <a-mixin
               id='animated-asset'
               src='gltf/women.gltf'
-              ref={assetRef}></a-asset-item>
+              ref={assetRef}></a-mixin>
           </a-assets> */}
           <a-box
             position='0 1.5 -3'
@@ -52,11 +63,11 @@ const Ar = () => {
             smoothTolerance='.01'
             smoothThreshold='5'>
             <a-entity
-              gltf-model='/glb/women.glb'
+              gltf-model='gltf/women.gltf'
               scale='1 1 1'
               position='0 0 0'
               rotation='-90 0 0 '
-              animation-mixer='loop: repeat'></a-entity>
+              animation='loop: true;isRawProperty:true'></a-entity>
           </a-nft>
           <a-entity camera></a-entity>
         </a-scene>
