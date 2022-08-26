@@ -34,7 +34,7 @@ export default () => {
         <div className={styles.container}>
           <a-scene
             ref={sceneRef}
-            mindar-image='imageTargetSrc: /mind/targets.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;'
+            mindar-image='imageTargetSrc:/mind/targets.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;'
             color-space='sRGB'
             embedded
             renderer='colorManagement: true, physicallyCorrectLights'
@@ -42,10 +42,9 @@ export default () => {
             device-orientation-permission-ui='enabled: false'>
             <a-assets>
               {/* <img
-                id='card'
-                crossOrigin='anonymous'
-                src='https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/card.png'
-              /> */}
+          id='card'
+          src='https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.0.0/examples/image-tracking/assets/card-example/card.png'
+        /> */}
               <a-asset-item
                 id='avatarModel'
                 src='/glb/women.glb'></a-asset-item>
@@ -57,17 +56,18 @@ export default () => {
 
             <a-entity mindar-image-target='targetIndex: 0'>
               {/* <a-plane
-                src='#card'
-                position='0 0 0'
-                height='0.552'
-                width='1'
-                rotation='0 0 0'></a-plane> */}
+          src='#card'
+          position='0 0 0'
+          height='0.552'
+          width='1'
+          rotation='0 0 0'></a-plane> */}
               <a-gltf-model
                 rotation='0 0 0 '
                 position='0 0 0.1'
                 scale='0.005 0.005 0.005'
                 src='#avatarModel'
-                animation='property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate'></a-gltf-model>
+                animation='property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate'
+                animation-mixer></a-gltf-model>
             </a-entity>
             <a-entity
               light='color: #fff; intensity: 2'
